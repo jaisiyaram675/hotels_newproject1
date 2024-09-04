@@ -1,0 +1,22 @@
+****Client kehta hai server ko: "Bhai, mujhe kuch data chahiye."
+
+***Server database ke paas jaata hai, wahan se data uthata hai.
+***JSON kehte hain us format ko jisme server data ko client tak transfer karne ke liye convert karta hai.
+***Server JSON format mein data ko bhejta hai.
+***Client us JSON ko decode karta hai aur apne kaam ke liye use karta hai.
+***JSON ka kaam yahaan data ko ek standard aur structured tareeke se encode aur decode karna hai, taaki client aur server asaani se data exchange kar saken.
+
+***********************************************
+
+JSON Ka Kya Role Hai?
++++Server Se Data Lana: Jab client ne request ki aur server ne database se data fetch kiya, toh server us raw data ko JSON format mein convert karta hai.
+++++Data Transfer Format: JSON ek lightweight aur human-readable format hai. Isliye, server JSON format mein data ko client ko bhejta hai.
++++++Client Ko Data Milta Hai: Client ne jo request ki thi, uska response usse JSON format mein milta hai. Client JSON ko parse karke (decode karke) data ko use karta hai.
+
+
+
+
+*********************************
+Aapke scenario mein, humare paas ek server, ek client, aur ek database hai. Jab client server se kehta hai ki "bhai, mujhe kuch data chahiye", toh server database ke paas jaata hai aur wahan se data uthata hai. Yeh data client ko bhejne ke liye tayyar kiya jaata hai.
+*******Conclusion
+JavaScript object automation tabhi kaam karti hai jab server se response ek valid JSON format mein ho. Agar response galat format mein ho, toh JavaScript ko usse parse karne mein problem hogi, aur automation ka process fail ho sakta hai.

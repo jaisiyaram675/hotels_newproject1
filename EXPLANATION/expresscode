@@ -1,0 +1,26 @@
+app.get('/noob', (req, res)=> {
+    res.send('internship nahi mil rahi hai bhai')
+  })
+  
+
+
+
+
+  
+  app.post('/local', (req, res)=> {
+    res.send('post request')
+  })
+
+
+  app.get('/Pro', (req, res)=> {
+    var customize_data={
+        name:'gaurav',
+        age:45,
+        address:{
+            street:'xyz',
+            city:'pune',
+            state:'maharashtra'
+        }
+    }
+    res.send(customize_data)
+  })

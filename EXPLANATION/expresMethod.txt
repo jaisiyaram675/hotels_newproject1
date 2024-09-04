@@ -1,0 +1,2 @@
+get method in express means that data ko only read  karna hai na delete means koi chade channi nahi karni 
+

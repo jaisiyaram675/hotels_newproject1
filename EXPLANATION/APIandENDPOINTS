@@ -1,0 +1,24 @@
+Jab hum hotel jaate hain aur wahan par menu card maangte hain, toh jo bhi menu card mein likha hota hai (jaise khaane ke items), waiter wahi cheez humare liye le aata hai. Isi tarah, server par bhi kuch endpoints hote hain jo ek list ki tarah hote hain. Yeh endpoints specify karte hain ki server kaunsa data ya service provide kar sakta hai.
+
+*************Hinglish Mein Samjhaayein Toh:
+**************Endpoints server ke woh addresses (URLs) hote hain jo batate hain ki hum server se kya request kar sakte hain.
+******Jaise menu card mein alag-alag items listed hote hain, waise hi endpoints par alag-alag operations ya data ki list hoti hai.
+*******Jo bhi endpoint likha hota hai, server usi ke according data ya service provide karega.
+**********API (Application Programming Interface) Ka Kya Matlab Hai?
+***********API (Application Programming Interface) ek collection hota hai in endpoints ka, jo define karta hai ki client aur server kaise communicate karenge.
+**************API ek waiter ki tarah hoti hai jo server se data le kar client tak pahuchati hai. Server pe jo endpoints available hain, woh sab mil kar ek API bante hain.
+*******Example Se Samajhte Hain:
+*********Socho ki ek hotel mein tum ek menu card maangte ho:
+
+*****Menu Card: Yeh hotel ke available khaane ki list hoti hai (jaise: "Pizza", "Burger", "Pasta").
+********Tum waiter se Pizza maangte ho (yani ek request karte ho).
+**********Waiter kitchen (server) se Pizza laakar tumhe deta hai.
+***********Similarly, jab client (humara browser ya application) server se kuch request karta hai:
+
+>>>Endpoints ek menu ki tarah hote hain, jo batate hain ki server pe kya-kya available hai.
+>>>Example: GET /products, POST /order, GET /user/profile
+>>>Client server ke kisi specific endpoint pe request bhejta hai (jaise: GET /products).
+>>>Server us endpoint ke according data ya response return karta hai.
+>>>Yeh sab endpoints milkar hi ek API banate hain, jo server aur client ke beech ka interface hota hai.
+
+>>>Toh, APIs ko aap ek menu card ki tarah samajh sakte hain jo server par available services ya data ko list karta hai, aur endpoints ko ek-ek khaane ki item ki tarah, jisse hum directly request karke specific information ya service paa sakte hain

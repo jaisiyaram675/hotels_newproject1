@@ -1,0 +1,77 @@
+const express = require("express");
+const app = express();
+const db = require("./db");
+const Person = require("./Models/Person");
+
+const Menu = require("./Models/Menu");
+//  this body-parser is a type of  expressmiddleware
+const bodyParser = require("body-parser");
+
+app.use(bodyParser.json());
+app.get("/", function (req, res) {
+  res.send("Welcome to my hotel how i can help you");
+});
+app.post("/Person", async (req, res) => {
+  try {
+    const data = req.body;
+    const newPerson = new Person(data);
+    const response = await newPerson.save();
+    console.log("dataSaved");
+    res.status(201).json(response);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ err: err.message });
+  }
+});
+
+//  ab data send karne ke baad data lena bi toh hai
+app.get("/Person", async (req, res) => {
+  try {
+    const data = await Person.find();
+    res.status(200).json(data);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ err: err.message });
+  }
+});
+app.post("/Menu", async (req, res) => {
+  try {
+    const data = req.body;
+    const newMenu = new Menu(data);
+    const response = await newMenu.save();
+    console.log("data saved");
+    res.status(201).json(response);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ err: err.message });
+  }
+});
+app.get("/Menu", async (req, res) => {
+  try {
+    const data = await Menu.find();
+    res.status(200).json(data);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ err: err.message });
+  }
+});
+app.get("/Person/:workType", async (req, res) => {
+  try {
+  const workType = req.params.workType;
+  if(workType=="chef" ||  workType=="waiter" || workType =="manager"){ 
+    const data = await Person.find({ work: workType });
+    console.log("data fetched");
+    res.status(200).json(data);
+  }
+  else{
+    res.status(400).json({ err: err.message });
+  }
+  
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ err: err.message });
+  }
+});
+app.listen(3000, () => {
+  console.log("listening on port 3000");
+});

@@ -1,0 +1,37 @@
+const express = require("express");
+const app = express();
+const db = require("./db");
+const Person = require("./Models/Person");
+//  this body-parser is a type of  expressmiddleware
+const bodyParser = require("body-parser");
+
+app.use(bodyParser.json());
+app.get("/", function (req, res) {
+  res.send("Welcome to my hotel how i can help you");
+});
+app.post("/Person",async (req, res) => {
+try{
+  const data = req.body;
+  const newPerson = new Person(data);
+ const response = await newPerson.save();
+ console.log("dataSaved",response);
+ res.status(201).json(response);
+  
+}
+catch(err) {
+  newPerson.save((err, response) => {
+    if (err) {
+      console.log("Error saving person", err);
+      res.status(500).json.send("Error saving person");
+      return;
+    } else {
+      console.log("Person saved successfully", Person);
+      res.status(201).json();
+    }
+  });
+}
+});
+
+app.listen(3000, () => {
+  console.log("listening on port 3000");
+});

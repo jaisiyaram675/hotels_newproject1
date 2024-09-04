@@ -1,0 +1,33 @@
+********************************create database in mongo
+use mydb
+
+
+
+*****create table in mongo
+ db.createCollection("users")
+
+ ***********************insert data i mongo
+
+ db.users.insertOne({name:"gaurav",age:45,city:"noida"})
+
+
+ ************************data find karne ke liye 
+
+ d.users.find()
+
+ *********************query in mongo to check it is less or greater than 
+
+
+ db.users.find({age:{$gt:30}})
+
+
+ *****************************update data in mongo
+
+
+ db.users.updateOne({name:"gaurav"} ,{$set:{age:50}})  means that ki jisme gaurav naam hai usme me jakar age ye set kar do
+
+
+
+ *******************delete data in mongo
+
+ db.users.deleteOne({name:"gaurav"})
