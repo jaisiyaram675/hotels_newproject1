@@ -1,0 +1,11 @@
+ git init to start new git repository ****************
+
+ git add . to add all files in current directory*******
+
+ git commit -m "message" to commit all files in current directory********
+
+ git push -u origin main to push all files in current directory to github********
+
+ git status to check status of all files in current directory****************   
+
+ git rm -r --cached node_modules to remove all files in current directory******** which are not in use in github
