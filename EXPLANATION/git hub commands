@@ -8,4 +8,6 @@
 
  git status to check status of all files in current directory****************   
 
- git rm -r --cached node_modules to remove all files in current directory******** which are not in use in github
+ git rm -r --cached node_modules to remove all files in current directory******** which are not in use in github**********************
+
+ 
