@@ -24,6 +24,6 @@ const personRoutes = require("./routes/personRoutes");
 app.use("/Person", personRoutes);
 const menuRoutes = require("./routes/menuRoutes");
 app.use("/Menu", menuRoutes);
-app.listen(3000, () => {
+app.listen(PORT, () => {
   console.log("listening on port 3000");
 });
