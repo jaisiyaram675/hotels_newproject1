@@ -4,12 +4,13 @@ require("dotenv").config();
 // const mongooseURL = 'mongodb://localhost:27017/hotels';
 // const mongooseURL="mongodb+srv://gauravdhull888:chutiyagithub888999000@cluster0.urvc6.mongodb.net/"
 // const mongooseURL =process.env.MONGODB_URL_LOCAL;
-// const mongooseURL =process.env.MONGODB_URL;
+const mongooseURL =process.env.MONGODB_URL;
 
 //  ab yahan se mongodb ka connection set karna hai 
-console.log(process.env.MONGODB_URL);
-const mongooseURL = process.env.MONGODB_URL;
-mongoose.connect(mongooseURL, { useNewURLParser: true, useUnifiedTopology: true });
+mongoose.connect(mongooseURL,{useNewURLParser: true,
+useUnifiedTopology: true
+
+})
 //  get the default mongodb connection
 
 const db = mongoose.connection;
