@@ -3,8 +3,8 @@ require("dotenv").config();
 // yo mongo url mongodb ka server nodejs tai connect kar dega 
 // const mongooseURL = 'mongodb://localhost:27017/hotels';
 // const mongooseURL="mongodb+srv://gauravdhull888:chutiyagithub888999000@cluster0.urvc6.mongodb.net/"
-// const mongooseURL =process.env.MONGODB_URL_LOCAL;
-const mongooseURL =process.env.MONGODB_URL;
+const mongooseURL =process.env.MONGODB_URL_LOCAL;
+// const mongooseURL =process.env.MONGODB_URL;
 
 //  ab yahan se mongodb ka connection set karna hai 
 mongoose.connect(mongooseURL,{useNewURLParser: true,
