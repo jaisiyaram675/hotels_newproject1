@@ -15,6 +15,7 @@ app.get("/", function (req, res) {
   res.send("Welcome to my our  hotel");
 });
 
+app.set('trust proxy', true);
 
 //  ab data send karne ke baad data lena bi toh hai
 
